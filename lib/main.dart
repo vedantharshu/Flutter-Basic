@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutterapp/secondscreen.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -34,7 +35,12 @@ class _State extends State<Basics> {
                 fontSize: 20.0,
               ),
             ),
-            FlatButton.icon(onPressed: () {}, icon:Icon(Icons.email), label: Text('Click Me')),
+            FlatButton.icon(
+                onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => secondScreen()));
+                 },
+                icon:Icon(Icons.email),
+                label: Text('Click Me')),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
